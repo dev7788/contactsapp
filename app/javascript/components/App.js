@@ -9,6 +9,7 @@ import Login from "./Login";
 import Profile from "./Profile";
 import Contacts from "./Contacts";
 import { PrivateRoute } from "./PrivateRoute";
+import Header from "./Header";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles.css';
@@ -20,10 +21,11 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
+          <Header />
           <Switch>
             <PrivateRoute exact path='/' component={Home} />            
             <PrivateRoute path='/profile' component={Profile} />
-            <PrivateRoute path='/constacts' component={Contacts} />
+            <PrivateRoute path='/contacts' component={Contacts} />
             <Route path='/login' component={Login} />
           </Switch>
         </BrowserRouter>

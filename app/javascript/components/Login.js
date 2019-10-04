@@ -7,21 +7,27 @@ import {
 } from 'reactstrap';
 
 class Login extends React.Component {
+
+  componentWillMount(){
+    if (localStorage.getItem('user')) {
+      this.props.history.push('/');
+      return;
+    }
+  }
   
   handleSubmit = this.handleSubmit.bind(this);
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(event.target.username.value, event.target.password.value);
     const username = event.target.username.value;
     const password = event.target.password.value;
-
+    
     if (username === 'Admin' && password === 'test1A') {
       localStorage.setItem('user', JSON.stringify({ username }));
-      window.location.href = '/';
+      this.props.history.push('/profile');
       return;
     }
-
+    
     alert('Invalid Username or Password!');
   }
 
