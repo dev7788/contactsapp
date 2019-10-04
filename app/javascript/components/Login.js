@@ -1,11 +1,59 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {
+  Container, Col, Form,
+  FormGroup, Label, Input,
+  Button,
+} from 'reactstrap';
+
 class Login extends React.Component {
+  
+  handleSubmit = this.handleSubmit.bind(this);
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(event.target.username.value, event.target.password.value);
+    const username = event.target.username.value;
+    const password = event.target.password.value;
+
+    if (username === 'Admin' && password === 'test1A') {
+      localStorage.setItem('user', JSON.stringify({ username }));
+      window.location.href = '/';
+      return;
+    }
+
+    alert('Invalid Username or Password!');
+  }
+
   render () {
     return (
-      <React.Fragment>
-        Login
-      </React.Fragment>
+      <Container className="login">
+        <h2>Sign In</h2>
+        <Form className="form" onSubmit={this.handleSubmit}>
+          <Col>
+            <FormGroup>
+              <Label>Username</Label>
+              <Input
+                type="text"
+                name="username"
+                id="exampleUsername"
+              />
+            </FormGroup>
+          </Col>
+          <Col>
+            <FormGroup>
+              <Label for="examplePassword">Password</Label>
+              <Input
+                type="password"
+                name="password"
+                id="examplePassword"
+                placeholder="********"
+              />
+            </FormGroup>
+          </Col>
+          <Button>Submit</Button>
+        </Form>
+      </Container>
     );
   }
 }
