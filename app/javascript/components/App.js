@@ -4,17 +4,15 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import Home from "./Home";
-import configureStore from "../configureStore";
 import Login from "./Login";
 import Profile from "./Profile";
-import Contacts from "./Contacts";
+import { Contacts } from "./Contacts";
 import { PrivateRoute } from "./PrivateRoute";
 import Header from "./Header";
+import { store } from '../helpers/store';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles.css';
-
-const store = configureStore();
 
 class App extends React.Component {
   render () {

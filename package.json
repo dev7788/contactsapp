@@ -18,6 +18,8 @@
     "react_ujs": "^2.6.0",
     "reactstrap": "^8.0.1",
     "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "turbolinks": "^5.2.0"
   },
