@@ -24,7 +24,7 @@ class Login extends React.Component {
     
     if (username === 'Admin' && password === 'test1A') {
       localStorage.setItem('user', JSON.stringify({ username }));
-      this.props.history.push('/profile');
+      location.href = '/profile';
       return;
     }
     
