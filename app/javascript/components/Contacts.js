@@ -28,6 +28,7 @@ class Contacts extends React.Component {
 
   render () {
     const { loading, data } = this.props;
+    const { contact, isOpen, selected } = this.state;
 
     const columns = [{
       Header: 'Email',
@@ -38,9 +39,7 @@ class Contacts extends React.Component {
     }, {
       Header: 'Phone',
       accessor: 'phone'
-    }];
-
-    const { contact } = this.state;
+    }];    
 
     return (
       <div>
@@ -49,7 +48,7 @@ class Contacts extends React.Component {
             pageWrapId={"page-wrap"}
             outerContainerId={"outer-container"}
             right
-            isOpen={this.state.isOpen}
+            isOpen={isOpen}
             width={280}
             onStateChange={this.onMenuStateChange}
           >
@@ -77,8 +76,8 @@ class Contacts extends React.Component {
                       })
                     },
                     style: {
-                      background: rowInfo.index === this.state.selected ? '#00afec' : 'white',
-                      color: rowInfo.index === this.state.selected ? 'white' : 'black'
+                      background: rowInfo.index === selected ? '#00afec' : 'white',
+                      color: rowInfo.index === selected ? 'white' : 'black'
                     }
                   }
                 } else {
