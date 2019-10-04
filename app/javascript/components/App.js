@@ -12,6 +12,7 @@ import Header from "./Header";
 import { store } from '../helpers/store';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-table/react-table.css';
 import '../styles.css';
 
 class App extends React.Component {

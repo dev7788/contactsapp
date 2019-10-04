@@ -20,6 +20,11 @@ class Api::V1::ContactsController < ApplicationController
         :name => 'demo4',
         :email => 'demo4@gmail.com',
         :phone => '423456'
+      },
+      {
+        :name => 'demo5',
+        :email => 'demo5@gmail.com',
+        :phone => '523456'
       }
     ] }    
   end

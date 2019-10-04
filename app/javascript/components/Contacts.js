@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { connect } from 'react-redux';
 import { Container } from 'reactstrap';
+import ReactTable from 'react-table';
 
 import { contactsActions } from '../actions';
 
@@ -13,9 +14,25 @@ class Contacts extends React.Component {
   render () {
     const { loading, data } = this.props;    
     console.log(loading, data);
+
+    const columns = [{
+      Header: 'Name',
+      accessor: 'name' // String-based value accessors!
+    }, {
+      Header: 'Email',
+      accessor: 'email' // String-based value accessors!
+    }, {
+      Header: 'Phone',
+      accessor: 'phone' // String-based value accessors!
+    }];
+
     return (
       <Container>
-        Contacts: {data ? data.length : 0}
+        { data && (
+        <ReactTable
+            data={data}
+            columns={columns}
+        />) }
       </Container>
     );
   }
