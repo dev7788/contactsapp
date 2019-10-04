@@ -70,7 +70,6 @@ class Contacts extends React.Component {
                 if (rowInfo && rowInfo.row) {
                   return {
                     onClick: (e) => {
-                      console.log('rowInfo', rowInfo, e);
                       this.setState({
                         selected: rowInfo.index,
                         contact: rowInfo.original,
