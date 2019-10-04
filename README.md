@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# How to install
+1. bundle install
+2. yarn install
+3. rails s -p 3000
+4. visit http://localhost:3000
