@@ -6,3 +6,15 @@
 .container {
     padding: 20px;
 }
+
+.menu-content {
+    background: white;
+    height: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#outer-container {
+    position: absolute;
+    top: 0;
+}
