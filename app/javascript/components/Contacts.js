@@ -5,6 +5,7 @@ import { Container } from 'reactstrap';
 import ReactTable from 'react-table';
 import { slide as Menu } from 'react-burger-menu'
 import { contactsActions } from '../actions';
+import ContactDetail from './ContactDetail';
 
 class Contacts extends React.Component {
   constructor(){
@@ -36,9 +37,6 @@ class Contacts extends React.Component {
     }, {
       Header: 'Name',
       accessor: 'name'
-    }, {
-      Header: 'Phone',
-      accessor: 'phone'
     }];    
 
     return (
@@ -49,12 +47,15 @@ class Contacts extends React.Component {
             outerContainerId={"outer-container"}
             right
             isOpen={isOpen}
-            width={280}
+            width={350}
             onStateChange={this.onMenuStateChange}
           >
             <div className="menu-content">
               {contact && (
-                <span><b>{contact.name}</b></span>
+                <ContactDetail
+                  {...contact}
+                  close={() => this.setState({ isOpen: state.isOpen })} 
+                />
               )}
             </div>
           </Menu>

@@ -8,13 +8,179 @@
 }
 
 .menu-content {
-    background: white;
+    background: rgb(246, 247, 251);
     height: 100%;
     text-align: center;
-    padding: 20px 0;
 }
 
 #outer-container {
     position: absolute;
     top: 0;
+}
+
+.contact-detail {
+    text-align: center;
+    color: rgb(39, 43, 94);
+}
+
+.cd-close-wrapper {
+    position: absolute;
+    right: 370px;
+    top: 16px;    
+}
+
+.cd-top-section {
+    padding: 15px;
+    background: white;
+}
+
+.cd-brand {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 23px;
+    background: rgb(138, 147, 187);
+    color: white;
+}
+
+.cd-brand h2 {
+    line-height: 70px;
+}
+
+.cd-name {
+    padding: 12px 0;
+    font-size: 17px;
+    font-weight: 500;    
+}
+
+.tag {
+    display: inline-table;
+    border: 1px solid #ECECF5;
+    border-radius: 7px;
+    padding: 0 10px;
+    height: 21px;
+    text-align: center;
+}
+
+.tag-name {
+    display: table-cell;
+    color: rgb(71, 73, 160);
+    font-size: 10px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.tag-close {
+    display: table-cell;
+    color: #FF4C43;
+    font-size: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.cd-tags {
+    display: inline-block;
+}
+
+.cd-tags ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cd-tags ul li {
+    float: left;
+    margin: 0 5px;
+}
+
+.cd-email {
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cd-actions {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.cd-actions ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cd-actions ul li {
+    float: left;
+    margin: 0 7px;
+}
+
+.button-action {
+    height: 35px;
+    width: 86px;
+    border-radius: 7px;
+    border: none;
+}
+
+.button-action:focus {
+    outline: none;
+}
+
+.button-action span {
+    font-size: 13px;
+}
+
+.button-invite {
+    color: #4749A0;
+    background: rgb(71,73,160, 0.1);
+}
+
+.button-cancel {
+    color: #FF4C43;
+    background: rgb(255,76,67, 0.1);
+}
+
+.cd-bottom-section {
+    padding: 20px 15px;
+    text-align: initial;
+}
+
+.tab-list {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(172, 181, 195);
+    cursor: pointer;
+}
+
+.tab-list-active {
+    background-color: white;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    color: rgb(39, 43, 94);
+}
+
+.tab-content {
+    background: white;
+    padding: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.td-label {
+    font-size: 12px;
+    color: rgb(172, 181, 195);
+}
+
+.td-value {
+    font-size: 12px;
+    color: rgb(39, 43, 94);
 }
