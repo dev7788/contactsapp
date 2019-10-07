@@ -54,7 +54,7 @@ class Contacts extends React.Component {
               {contact && (
                 <ContactDetail
                   {...contact}
-                  close={() => this.setState({ isOpen: state.isOpen })} 
+                  close={() => this.setState({ isOpen: close })} 
                 />
               )}
             </div>

@@ -26,7 +26,11 @@
 .cd-close-wrapper {
     position: absolute;
     right: 370px;
-    top: 16px;    
+    top: 16px;
+}
+
+.cd-close-wrapper img {
+    cursor: pointer;
 }
 
 .cd-top-section {
@@ -35,11 +39,11 @@
 }
 
 .cd-brand {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
     margin: auto;
-    border-radius: 23px;
-    background: rgb(138, 147, 187);
+    border-radius: 20px;
+    background: #7F88B2;
     color: white;
 }
 
@@ -57,7 +61,7 @@
     display: inline-table;
     border: 1px solid #ECECF5;
     border-radius: 7px;
-    padding: 0 10px;
+    padding: 0 5px;
     height: 21px;
     text-align: center;
 }
@@ -68,6 +72,7 @@
     font-size: 10px;
     text-transform: uppercase;
     vertical-align: middle;
+    padding-top: 1px;
 }
 
 .tag-close {
@@ -183,4 +188,45 @@
 .td-value {
     font-size: 12px;
     color: rgb(39, 43, 94);
+}
+
+.button-add {
+    position: relative;
+    display: table-cell;
+    color: #FF4C43 !important;
+    width: 26px;
+    height: 21px;
+    border: 1px solid #ECECF5;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.tag-input {
+    width: 190px;
+    height: 26px;
+    background: #F5F6FA;
+    border-radius: 12px;
+    font-size: 12px;
+    padding: 0 10px;
+    border: none;
+}
+
+.tag-input:placeholder{
+    color: rgb(172, 181, 195);
+}
+
+.tag-input:focus {
+    outline: none;
+}
+
+.rpt-textbox:focus {
+    outline: none !important;
+}
+
+.rpt-shadow-container {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 15px, rgba(0, 0, 0, 0.1) 0px 0px 3px, rgba(0, 0, 0, 0.15) 0px 0px 0px 0px !important;
+}
+
+.rpt-arrow {
+    background-color: white !important;
 }

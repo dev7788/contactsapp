@@ -1,10 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Row, Col } from 'reactstrap';
-import CloseImage from 'images/close.png';
 import Tag from "./common/Tag";
 import Tabs from "./common/Tabs";
 import Space from "./common/Space";
+import CloseImage from 'images/close.png';
+import USImage from 'images/us.png';
+import AddTagBtn from "./common/AddTagBtn";
 
 class ContactDetail extends React.Component {
   render () {
@@ -12,7 +14,7 @@ class ContactDetail extends React.Component {
     return (
       <div className="contact-detail">
         <div className="cd-close-wrapper">
-          <img src={CloseImage} />
+          <img src={CloseImage} onClick={this.props.close} />
         </div>
         <div className="cd-main">
           <div className="cd-top-section">
@@ -29,6 +31,9 @@ class ContactDetail extends React.Component {
                     <Tag name={e} />
                   </li>))
                 }
+                <li>
+                  <AddTagBtn />
+                </li>
               </ul>
             </div>
             <div className="cd-email">
@@ -68,7 +73,7 @@ class ContactDetail extends React.Component {
                   <Row>
                     <Col>
                       <span className="td-label">COUNTRY</span><br />
-                      <span className="td-value">USA</span>
+                      <img src={USImage} />&nbsp;<span className="td-value">USA</span>
                     </Col>
                     <Col>
                       <span className="td-label">TIME ON WEBINAR</span><br />
